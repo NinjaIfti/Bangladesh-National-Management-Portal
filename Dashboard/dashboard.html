@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Portal of Bangladesh - Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Reset and general styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Header styles */
+        .header {
+            background: linear-gradient(90deg, #2f8f2f, #3cb043);
+            color: #ffffff;
+            padding: 1rem 0;
+        }
+
+        .logo img {
+            width: 50px;
+            height: auto;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Banner styles */
+        .banner {
+            background: linear-gradient(90deg, #2f8f2f, #3cb043);
+            color: #ffffff;
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .banner-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .banner-text p {
+            font-size: 1.2rem;
+        }
+
+        /* Services section */
+        .services {
+            padding: 2rem 0;
+            background-color: #ffffff;
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #2f8f2f;
+        }
+
+        .service-cards {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            padding: 1.5rem;
+            width: 30%;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            color: #2f8f2f;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer styles */
+        .footer {
+            background: linear-gradient(90deg, #2f8f2f, #3cb043);
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer p {
+            margin: 0.5rem 0;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .service-cards {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+        height: 100vh;
+        background: url('img/scene2.jpg') no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .hero-content {
+        color: white;
+        text-align: center;
+        }
+
+        /* Testimonial Section */
+        .testimonials {
+        padding: 40px;
+        background-color: #f7f7f7;
+        text-align: center;
+        }
+
+        .testimonial-slider {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        }
+
+        .testimonial-slider p {
+        font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/BD_govt_logo.png" alt="National Logo">
+            </div>
+            <nav class="navbar">
+                <a href="#" class="logo">Natinal Management portal</a>
+                <!-- Checkbox input for hamburger menu toggle -->
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </label>
+                <ul class="nav-links">
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="#about">About</a></li>
+                </ul>
+              </nav>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-text">
+            <h1>Welcome to the National Portal of Bangladesh</h1>
+            <p>Your gateway to information and services in Bangladesh.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <main>
+
+         <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+          <h1>Welcome to the Bangladesh Natinal Management portal</h1>
+          <a href="#" class="cta-button">Get Started</a>
+        </div>
+      </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Service 1">
+                    <h3>Service 1</h3>
+                    <p>Description of service 1</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Service 2">
+                    <h3>Service 2</h3>
+                    <p>Description of service 2</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Service 3">
+                    <h3>Service 3</h3>
+                    <p>Description of service 3</p>
+                </div>
+            </div>
+        </section>
+
+            <!-- Testimonial Section -->
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Second slide label</h5>
+                      <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 National Portal of Bangladesh</p>
+            <p>All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
