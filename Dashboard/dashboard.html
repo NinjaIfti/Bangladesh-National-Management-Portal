@@ -18,19 +18,28 @@
             color: #333;
         }
 
+        /* Header styles */
+        .header {
+            background: linear-gradient(90deg, #1e6e1e, #2a7a2a);
+            color: #ffffff;
+            padding: 1rem 0;            
+        }
+
         .container {
             width: 90%;
             max-width: 1200px;
             margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
         }
 
-        /* Header styles */
-        .header {
-            background: linear-gradient(90deg, #2f8f2f, #3cb043);
-            color: #ffffff;
-            padding: 1rem 0;
-        }
 
+        .logo {
+            display: flex;
+            align-items: center;
+        }
         .logo img {
             width: 50px;
             height: auto;
@@ -44,6 +53,9 @@
         .navbar {
             display: flex;
             align-items: center;
+            flex-grow: 1;
+            justify-content: flex-end;
+            margin-left: 1rem;
         }
 
         .nav-links {
@@ -61,6 +73,7 @@
         .nav-links a:hover {
             text-decoration: underline;
         }
+
 
         /* Hamburger menu for mobile */
         .hamburger {
