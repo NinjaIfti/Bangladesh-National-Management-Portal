@@ -142,7 +142,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Service Modal -->
     <div class="modal" id="serviceModal">
         <div class="modal-content">
             <h2>Service Request</h2>
