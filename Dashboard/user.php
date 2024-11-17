@@ -70,6 +70,53 @@
         .buttons button:hover {
             background-color: #145014;
         }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .modal-content h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .modal-content p {
+            margin-bottom: 1rem;
+        }
+
+        .modal-content button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #1e6e1e;
+            color: #ffffff;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+
+        .modal-content button:hover {
+            background-color: #145014;
+        }
     </style>
 </head>
 <body>
@@ -80,7 +127,7 @@
         <p><span>Full Name:</span> John Doe</p>
         <p><span>Username:</span> john.doe</p>
         <p><span>Email:</span> john.doe@example.com</p>
-        <p><span>User Role:</span> Citizen</p>
+        <p><span>User Role:</span> Admin</p>
         <p><span>Notification Preferences:</span> Email, SMS</p>
         <p><span>Registration Date:</span> 2024-11-01</p>
     </div>
@@ -95,11 +142,67 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <h2>Service Request</h2>
+            <p id="modalMessage"></p>
+            <button id="confirmButton">Confirm</button>
+            <button id="cancelButton">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <h2>Request Successful</h2>
+            <p id="confirmationMessage"></p>
+            <button onclick="closeModal('confirmationModal')">OK</button>
+        </div>
+    </div>
+
     <script>
-        // Function to handle button clicks
+        let selectedService = '';
+
         function handleService(service) {
-            alert(`You have selected the ${service} service.`);
-            // Redirect or handle service selection here
+            selectedService = service;
+            document.getElementById('modalMessage').innerText = `You have selected the ${service} service.`;
+            openModal('serviceModal');
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Confirm and Cancel logic
+        document.getElementById('confirmButton').addEventListener('click', async () => {
+            closeModal('serviceModal');
+
+            // Simulating database interaction
+            const requestId = await fetchRequestId(selectedService);
+
+            // Update the confirmation modal with the request ID
+            document.getElementById('confirmationMessage').innerText = 
+                `You have requested the ${selectedService} service. Your request ID is "${requestId}".`;
+            openModal('confirmationModal');
+        });
+
+        document.getElementById('cancelButton').addEventListener('click', () => {
+            closeModal('serviceModal');
+        });
+
+        // Simulate fetching request ID from the database
+        async function fetchRequestId(service) {
+            // Simulated delay and dummy request ID
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(Math.floor(Math.random() * 1000000)); // Generate a random request ID
+                }, 1000);
+            });
         }
     </script>
 </body>
