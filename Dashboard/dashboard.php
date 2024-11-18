@@ -242,6 +242,7 @@ require_once('includes/db.php');
             <div class="logo">
                 <img src="img/BD_govt_logo.png" alt="National Logo">
             </div>
+            <button class="btn"><a class="nav-link" href="user.php">Portal</a></button>
             <nav class="navbar">
                 <div class="hamburger" onclick="toggleMenu()">
                     <span></span>
@@ -249,6 +250,7 @@ require_once('includes/db.php');
                     <span></span>
                 </div>
                 <ul class="nav-links">
+                    
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -308,12 +310,7 @@ require_once('includes/db.php');
     </main>
 
     <!-- Footer Section -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 National Portal of Bangladesh</p>
-            <p>All rights reserved</p>
-        </div>
-    </footer>
+    <?php require_once('includes/footer.php'); ?>
 
     <script>
         // JavaScript for Testimonial Slider
