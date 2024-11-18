@@ -192,7 +192,7 @@ require_once('includes/db.php');
             background: linear-gradient(#ffffff, #36A13A);
             border: none;
             color: white;
-            padding: 12px 24px;
+            padding: 8px 24px;
             font-size: 10px;
             font-weight: bold;
             border-radius: 30px;
