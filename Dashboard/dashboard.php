@@ -186,6 +186,31 @@ require_once('includes/db.php');
         .testimonial.active {
             opacity: 1;
         }
+
+         /* Button */
+         .btn {
+            background: linear-gradient(#ffffff, #36A13A);
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            font-size: 10px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            }
+
+        .btn:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
     </style>
 </head>
 <body>
@@ -195,7 +220,8 @@ require_once('includes/db.php');
             <div class="logo">
                 <img src="img/BD_govt_logo.png" alt="National Logo">
             </div>
-            <button class="btn"><a class="nav-link" href="user.php">Portal</a></button>
+            <a class="btn" href="user.php">Portal</a>
+
             <nav class="navbar">
                 <div class="hamburger" onclick="toggleMenu()">
                     <span></span>
